@@ -1,0 +1,22 @@
+void sort(int values[], int n)
+{
+    // TODO: implement an O(n^2) sorting algorithm
+    // selectionsort
+    int i, j, temp, min;
+    for (i = 0; i < n-1; i++)
+    {
+        min = i;
+        for (j = i+1; j < n; j++)
+        {
+            if(values[j] < values[min])
+            {
+                min = j;
+            }
+            
+            temp = values[min];
+            values[min] = values[i];
+            values[i] = temp;
+        }
+    }
+
+}
